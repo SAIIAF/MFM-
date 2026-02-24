@@ -1,0 +1,84 @@
+.latest-section {
+    padding: 30px 10%;
+    color: #fff;
+    overflow: hidden;
+
+    background: linear-gradient(to left,
+            #017a8d 0%,
+            #028ea3 40%,
+            #8bc3cc 75%,
+            #ffffff 100%);
+}
+.latest-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* ===== IMAGE SIDE ===== */
+
+.latest-image {
+    flex: 1;
+    border-radius: 20px;
+    /* خلفية في حالة وجود فراغ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.latest-image img {
+    width: 100%;
+    height: auto;
+    /* مهم علشان متتقصش */
+    max-height: 500px;
+    /* يحافظ على حجم مناسب */
+    object-fit: contain;
+    /* يعرض الصورة كاملة */
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.latest-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== CONTENT SIDE ===== */
+
+.latest-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.latest-content h2 {
+    color: rgb(255, 255, 255);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.latest-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+    .latest-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .latest-image img {
+        max-height: 400px;
+    }
+
+    .latest-content h2 {
+        font-size: 48px;
+    }
+}
