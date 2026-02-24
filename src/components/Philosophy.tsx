@@ -35,7 +35,6 @@ const philosophyData: PhilosophyCard[] = [
 
 const Philosophy = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const buttonsRef = useRef<(HTMLDivElement | null)[]>([]);
     const buttonCTARef = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {

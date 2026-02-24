@@ -1,5 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import { useLayoutEffect, useRef, useState } from "react"; import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/aboutpage.css";
 import Navbar from "../components/Navbar";
@@ -90,54 +89,71 @@ const About = () => {
             });
 
             // SECTION 2
-            gsap.from(section2Ref.current?.querySelectorAll(".image-box"), {
-                x: -100,
-                opacity: 0,
-                stagger: 0.3,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section2Ref.current,
-                    start: "top 80%",
-                },
-            });
+            if (section2Ref.current) {
+                const images = section2Ref.current.querySelectorAll(".image-box");
+                const textItems =
+                    section2Ref.current.querySelectorAll(".text-content > *");
 
-            gsap.from(section2Ref.current?.querySelectorAll(".text-content > *"), {
-                x: 100,
-                opacity: 0,
-                stagger: 0.3,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section2Ref.current,
-                    start: "top 80%",
-                },
-            });
-
-            // SECTION 3
-            gsap.from(section3Ref.current?.querySelector(".experience-box"), {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section3Ref.current,
-                    start: "top 80%",
-                },
-            });
-
-            gsap.fromTo(
-                section3Ref.current?.querySelectorAll(".experience-text > *"),
-                { x: 80, opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
+                gsap.from(images, {
+                    x: -100,
+                    opacity: 0,
                     stagger: 0.3,
                     duration: 1,
                     scrollTrigger: {
-                        trigger: section3Ref.current,
+                        trigger: section2Ref.current,
                         start: "top 80%",
-                        toggleActions: "play none none reverse",
                     },
+                });
+
+                gsap.from(textItems, {
+                    x: 100,
+                    opacity: 0,
+                    stagger: 0.3,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section2Ref.current,
+                        start: "top 80%",
+                    },
+                });
+            }
+
+
+            // SECTION 3
+            if (section3Ref.current) {
+                const experienceBox =
+                    section3Ref.current.querySelector(".experience-box");
+
+                const experienceText =
+                    section3Ref.current.querySelectorAll(".experience-text > *");
+
+                if (experienceBox) {
+                    gsap.from(experienceBox, {
+                        scale: 0.8,
+                        opacity: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: section3Ref.current,
+                            start: "top 80%",
+                        },
+                    });
                 }
-            );
+
+                gsap.fromTo(
+                    experienceText,
+                    { x: 80, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        stagger: 0.3,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: section3Ref.current,
+                            start: "top 80%",
+                            toggleActions: "play none none reverse",
+                        },
+                    }
+                );
+            }
 
             if (countRef.current) {
                 gsap.fromTo(
@@ -156,21 +172,26 @@ const About = () => {
             }
 
             // SECTION 4
-            gsap.fromTo(
-                projectsRef.current?.querySelectorAll(".thumb"),
-                { y: 40, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    stagger: 0.1,
-                    duration: 0.8,
-                    scrollTrigger: {
-                        trigger: projectsRef.current,
-                        start: "top 85%",
-                        toggleActions: "play none none reverse",
-                    },
-                }
-            );
+            if (projectsRef.current) {
+                const thumbs =
+                    projectsRef.current.querySelectorAll(".thumb");
+
+                gsap.fromTo(
+                    thumbs,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        stagger: 0.1,
+                        duration: 0.8,
+                        scrollTrigger: {
+                            trigger: projectsRef.current,
+                            start: "top 85%",
+                            toggleActions: "play none none reverse",
+                        },
+                    }
+                );
+            }
 
         }, containerRef);
 
