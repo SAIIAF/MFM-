@@ -1,4 +1,8 @@
-.hero {
+/* ==============================
+   MFM HERO SECTION
+   ============================== */
+
+.mfm-hero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -7,38 +11,40 @@
     justify-content: center;
     overflow: hidden;
     margin-top: 20px;
+    isolation: isolate;
 }
 
-.hero-video {
+/* ===== VIDEO ===== */
+
+.mfm-hero__video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    background: linear-gradient(135deg, #16697a 0%, #262626 100%);
+    z-index: 1;
 }
 
-.hero-overlay {
+/* ===== OVERLAY ===== */
+
+.mfm-hero__overlay {
     position: absolute;
     inset: 0;
     z-index: 2;
-
     background:
-        radial-gradient(circle at 25% 35%,
-            rgba(1, 123, 141, 0.55) 0%,
-            rgba(1, 123, 141, 0.35) 25%,
-            transparent 60%),
-        linear-gradient(120deg,
-            rgba(1, 123, 141, 0.65) 45%,
-            rgba(131, 131, 131, 0.55) 100%);
+            radial-gradient(circle at 25% 35%,
+                rgba(1, 123, 141, 0.55) 0%,
+                rgba(1, 123, 141, 0.35) 25%,
+                transparent 60%),
+            linear-gradient(120deg,
+                rgba(1, 123, 141, 0.65) 45%,
+                rgba(131, 131, 131, 0.55) 100%);
+    pointer-events: none;
 }
 
-.hero-content {
+/* ===== CONTENT ===== */
+
+.mfm-hero__content {
     position: relative;
     z-index: 3;
     text-align: center;
@@ -46,31 +52,29 @@
     max-width: 1310px;
 }
 
-.hero-heading {
+.mfm-hero__title {
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 700;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 2rem;
     line-height: 1.2;
     letter-spacing: 2px;
 }
 
-.hero-heading .char {
-    display: inline-block;
-}
-
-.hero-subheading {
+.mfm-hero__subtitle {
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: clamp(1rem, 2vw, 1.3rem);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
     font-weight: 300;
 }
 
-.scroll-indicator {
+/* ===== SCROLL INDICATOR ===== */
+
+.mfm-hero__scroll-indicator {
     position: absolute;
     bottom: 3rem;
     left: 50%;
@@ -79,15 +83,15 @@
     cursor: pointer;
 }
 
-.scroll-arrow {
+.mfm-hero__scroll-arrow {
     width: 30px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     border-radius: 20px;
     position: relative;
 }
 
-.scroll-arrow::before {
+.mfm-hero__scroll-arrow::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -95,12 +99,12 @@
     transform: translateX(-50%);
     width: 6px;
     height: 6px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 50%;
-    animation: scrollAnimation 2s infinite;
+    animation: mfmHeroScrollAnimation 2s infinite;
 }
 
-@keyframes scrollAnimation {
+@keyframes mfmHeroScrollAnimation {
     0% {
         top: 10px;
         opacity: 1;
@@ -112,21 +116,23 @@
     }
 }
 
+/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
-    .hero {
+    .mfm-hero {
         margin-top: 60px;
     }
 
-    .hero-heading {
+    .mfm-hero__title {
         font-size: 2rem;
         letter-spacing: 1px;
     }
 
-    .hero-subheading {
+    .mfm-hero__subtitle {
         font-size: 1rem;
     }
 
-    .scroll-indicator {
+    .mfm-hero__scroll-indicator {
         bottom: 2rem;
     }
 }

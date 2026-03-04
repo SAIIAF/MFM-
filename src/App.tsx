@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import News from "./pages/News";
 import WhitePaper from "./pages/WhitePaper";
+import MediaMonitoring from "./pages/MediaMonitoring";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
 
       <div className="min-h-screen">
         <Navbar />
-
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -26,6 +27,8 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/news" element={<News />} />
           <Route path="/white-paper" element={<WhitePaper />} />
+
+          <Route path="/media-monitoring" element={<MediaMonitoring />} />
         </Routes>
       </div>
     </Router>

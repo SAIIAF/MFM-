@@ -3,12 +3,13 @@
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(to left,
-            #017a8d 0%,
+            #017B8D 0%,
             #028ea3 40%,
             #8bc3cc 75%,
             #ffffff 100%);
-    
+
 }
+
 .gallery-header {
     position: absolute;
     top: rem;

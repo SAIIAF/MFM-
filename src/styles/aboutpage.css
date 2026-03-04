@@ -103,16 +103,18 @@
 
 .text-content {
     flex: 1;
+    text-align: start;
 }
 
 .text-content h2 {
     font-size: 48px;
     color: #017B8D;
     line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .text-content h3 {
-    margin: 25px 0;
+    margin: 0;
     color: #017B8D;
     font-weight: 600;
 }

@@ -21,7 +21,7 @@ const Navbar = () => {
         { to: '/services', label: 'Services' },
         { to: '/events', label: 'Events' },
         { to: '/news', label: 'News' },
-        // { to: '/white-paper', label: 'White Paper' },
+        { to: '/white-paper', label: 'White Paper' },
         { to: '/contact', label: 'Contact' },
     ];
 

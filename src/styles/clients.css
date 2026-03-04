@@ -48,7 +48,7 @@
 }
 
 .clients-track::-webkit-scrollbar-thumb {
-    background: #16697a;
+    background: #017B8D;
     border-radius: 3px;
 }
 
@@ -69,7 +69,7 @@
 
 .client-logo-item:hover {
     transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 15px 40px rgba(22, 105, 122, 0.15);
+    box-shadow: 0 15px 40px rgba(1, 123, 141, 0.15);
 }
 
 .client-logo {

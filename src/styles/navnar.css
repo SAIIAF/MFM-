@@ -77,7 +77,7 @@
 }
 
 .nav-link.active {
-    color: #16697a;
+    color: #017B8D;
 }
 
 .nav-link.active::after {
@@ -130,10 +130,10 @@
     }
 
     .mobile-nav-link:hover {
-        color: #16697a;
+        color: #017B8D;
     }
 
     .mobile-nav-link.active {
-        color: #16697a;
+        color: #017B8D;
     }
 }

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import '../styles/hero.css';
+import heroVideo from '../assets/video/Screen Recording 2025-05-07.mp4';
 
 const Hero = () => {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -8,23 +9,22 @@ const Hero = () => {
     const scrollIndicatorRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const timeline = gsap.timeline();
+        const tl = gsap.timeline();
 
-        timeline.fromTo(
+        tl.fromTo(
             titleRef.current,
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
-        );
-
-        timeline.fromTo(
-            paragraphRef.current,
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
-            '-=0.5'
-        );
+            { opacity: 0, y: 60 },
+            { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }
+        )
+            .fromTo(
+                paragraphRef.current,
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+                '-=0.7'
+            );
 
         gsap.to(scrollIndicatorRef.current, {
-            y: 10,
+            y: 12,
             duration: 1.5,
             repeat: -1,
             yoyo: true,
@@ -36,7 +36,7 @@ const Hero = () => {
         const targetSection = document.getElementById('our-latest');
 
         if (targetSection) {
-            const navbarOffset = 80; // عدلها لو ارتفاع الناف بار مختلف
+            const navbarOffset = 80;
             const top =
                 targetSection.getBoundingClientRect().top +
                 window.scrollY -
@@ -50,24 +50,24 @@ const Hero = () => {
     };
 
     return (
-        <section className="hero">
+        <section className="mfm-hero">
             <video
-                className="hero-video"
-                src="/video/Screen Recording 2025-05-07.mp4"
+                className="mfm-hero__video"
+                src={heroVideo}
                 autoPlay
                 muted
                 loop
                 playsInline
             />
 
-            <div className="hero-overlay" />
+            <div className="mfm-hero__overlay" />
 
-            <div className="hero-content">
-                <h1 ref={titleRef} className="hero-heading">
+            <div className="mfm-hero__content">
+                <h1 ref={titleRef} className="mfm-hero__title">
                     Marketing Facility Management
                 </h1>
 
-                <p ref={paragraphRef} className="hero-subheading">
+                <p ref={paragraphRef} className="mfm-hero__subtitle">
                     The company with more than 30 years experience in Egypt, Qatar, and KSA
                     as an integrated marketing communications and public relations firm.
                 </p>
@@ -75,11 +75,10 @@ const Hero = () => {
 
             <div
                 ref={scrollIndicatorRef}
-                className="scroll-indicator"
+                className="mfm-hero__scroll-indicator"
                 onClick={scrollToLatestSection}
-                style={{ cursor: 'pointer' }}
             >
-                <div className="scroll-arrow" />
+                <div className="mfm-hero__scroll-arrow" />
             </div>
         </section>
     );

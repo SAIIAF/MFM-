@@ -32,13 +32,13 @@
     position: absolute;
     inset: 0;
     background:
-            radial-gradient(circle at 25% 35%,
-                rgba(1, 123, 141, 0.55) 0%,
-                rgba(1, 123, 141, 0.35) 25%,
-                transparent 60%),
-            linear-gradient(120deg,
-                rgba(1, 123, 141, 0.65) 45%,
-                rgba(131, 131, 131, 0.55) 100%);
+        radial-gradient(circle at 25% 35%,
+            rgba(1, 123, 141, 0.55) 0%,
+            rgba(1, 123, 141, 0.35) 25%,
+            transparent 60%),
+        linear-gradient(120deg,
+            rgba(1, 123, 141, 0.65) 45%,
+            rgba(131, 131, 131, 0.55) 100%);
 }
 
 .hero-content {
@@ -52,11 +52,11 @@
     font-size: 60px;
     margin-bottom: 20px;
     color: #fff;
-        letter-spacing: 1px;
-        text-shadow:
-            0 0 10px rgba(0, 212, 255, 0.3),
-            0 0 20px rgba(0, 212, 255, 0.3),
-            0 0 40px rgba(0, 212, 255, 0.3);
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 10px rgba(0, 212, 255, 0.3),
+        0 0 20px rgba(0, 212, 255, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.3);
 }
 
 .hero-content p {
@@ -95,9 +95,9 @@
 }
 
 .text-content h2 {
-margin-top: 60px;
     color: #017B8D;
     margin-bottom: 20px;
+    text-align: start;
 }
 
 .intro {
@@ -121,7 +121,7 @@ margin-top: 60px;
 .dot {
     width: 10px;
     height: 10px;
-    background-color: #16697a;
+    background-color: #017B8D;
     border-radius: 50%;
 }
 
@@ -134,12 +134,13 @@ margin-top: 60px;
     color: white;
 }
 
-.section-title {
+.sectionservices-title{
     font-size: 36px;
     margin-bottom: 60px;
     font-weight: 600;
     letter-spacing: 1px;
     position: relative;
+
 }
 
 .section-title::after {
