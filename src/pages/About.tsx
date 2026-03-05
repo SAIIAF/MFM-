@@ -4,8 +4,6 @@ import "../styles/aboutpage.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import heroVideo from "../../public/video/Screen Recording 2025-05-07.mp4";
-
 import img1 from "../assets/images/about/abot1.jpg";
 import img2 from "../assets/images/about/about2.jpg";
 import img3 from "../assets/images/about/about3.jpg";
@@ -204,7 +202,9 @@ const About = () => {
 
             {/* HERO */}
             <section className="hero" ref={heroRef}>
-                <video className="hero-video" src={heroVideo} autoPlay muted loop playsInline />
+                <video autoPlay muted loop playsInline className="hero-video">
+                    <source src="/video/back.mp4" type="video/mp4" />
+                </video>
                 <div className="overlay" />
                 <div className="hero-content">
                     <h1 className="hero-title">Our Team</h1>

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import '../styles/hero.css';
-import heroVideo from '../assets/video/Screen Recording 2025-05-07.mp4';
 
 const Hero = () => {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -48,17 +47,12 @@ const Hero = () => {
             });
         }
     };
-
+    
     return (
         <section className="mfm-hero">
-            <video
-                className="mfm-hero__video"
-                src={heroVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-            />
+            <video autoPlay muted loop playsInline className="mfm-hero__video">
+                <source src="/video/back.mp4" type="video/mp4" />
+            </video>
 
             <div className="mfm-hero__overlay" />
 

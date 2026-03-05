@@ -126,7 +126,7 @@ const ServicesPage: React.FC = () => {
                 {/* HERO */}
                 <section className="hero-section">
                     <video autoPlay muted loop playsInline className="hero-video">
-                        <source src="/video/Screen Recording 2025-05-07.mp4" type="video/mp4" />
+                        <source src="/video/back.mp4" type="video/mp4" />
                     </video>
 
                     <div className="overlay" />
@@ -192,7 +192,7 @@ const ServicesPage: React.FC = () => {
                 <section className="center-video-section">
                     <div className="center-video-wrapper">
                         <video autoPlay muted loop playsInline>
-                            <source src="/video/Screen Recording 2025-05-07.mp4" type="video/mp4" />
+                            <source src="/video/back.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </section>
