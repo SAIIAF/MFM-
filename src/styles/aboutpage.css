@@ -185,6 +185,24 @@
     opacity: 0.9;
 }
 
+.buttonn {
+    margin-top: 1.9rem;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #017B8D;
+    background: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttonn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(139, 200, 212, 0.3);
+}
+
 /* ================= PROJECTS ================= */
 
 .about-projects-section {
@@ -311,13 +329,13 @@
         font-size: 14px;
     }
 
-        .about-hero-title span {
+    .about-hero-title span {
         font-size: 20px;
         display: block;
         margin-top: 10px;
         color: #ffffff;
         opacity: 0.85;
-        }
+    }
 
     .about-text-content h2 {
         font-size: 30px;
@@ -357,7 +375,7 @@
         margin-top: 10px;
         color: #ffffff;
         opacity: 0.85;
-        }
+    }
 
     .about-projects-title {
         font-size: 30px;
@@ -373,6 +391,7 @@
         padding: 70px 5%;
     }
 }
+
 @media (max-width: 380px) {
 
     .about-hero-content {
@@ -385,7 +404,7 @@
         margin-top: 10px;
         color: #ffffff;
         opacity: 0.85;
-        }
+    }
 
-    
+
 }

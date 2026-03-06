@@ -13,6 +13,8 @@ import g4 from "../assets/images/about/about3.jpg";
 import g5 from "../assets/images/لوجو/لوجو.webp";
 import g6 from "../assets/images/لوجو/لوجو2.webp";
 
+import { useNavigate } from "react-router-dom";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -23,6 +25,7 @@ const About = () => {
     const projectsRef = useRef<HTMLDivElement>(null);
     const countRef = useRef<HTMLSpanElement>(null);
     const mainImageRef = useRef<HTMLImageElement>(null);
+    const navigate = useNavigate();
 
     const [activeIndex, setActiveIndex] = useState(0);
     const galleryImages = [g1, g2, g3, g4, g5, g6];
@@ -245,6 +248,12 @@ const About = () => {
                     </p>
                     <br />
                     <p>MFM-Egypt helps Egypt’s Businesses develop tailored marketing communications solutions to drive success in national and international markets. Call us today to learn more.</p>
+                    <button
+                        className="buttonn"
+                        onClick={() => navigate("/contact")}
+                    >
+                        Call Us
+                    </button>
                 </div>
             </section>
 
