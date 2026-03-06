@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import '../styles/hero.css';
+import Logoo from '../assets/images/لوجو/لوجو.webp';
 
 const Hero = () => {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -53,14 +54,19 @@ const Hero = () => {
             <video autoPlay muted loop playsInline className="mfm-hero__video">
                 <source src="/video/back.mp4" type="video/mp4" />
             </video>
-
             <div className="mfm-hero__overlay" />
 
             <div className="mfm-hero__content">
+                <div className="img-logo">
+                    <img
+                        src={Logoo}
+                        alt="MFM Logo"
+                        className="mfm-hero__logo"
+                    />
+                </div>
                 <h1 ref={titleRef} className="mfm-hero__title">
                     Marketing Facility Management
                 </h1>
-
                 <p ref={paragraphRef} className="mfm-hero__subtitle">
                     The company with more than 30 years experience in Egypt, Qatar, and KSA
                     as an integrated marketing communications and public relations firm.

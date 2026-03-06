@@ -32,13 +32,13 @@
     inset: 0;
     z-index: 2;
     background:
-            radial-gradient(circle at 25% 35%,
-                rgba(1, 123, 141, 0.55) 0%,
-                rgba(1, 123, 141, 0.35) 25%,
-                transparent 60%),
-            linear-gradient(120deg,
-                rgba(1, 123, 141, 0.65) 45%,
-                rgba(131, 131, 131, 0.55) 100%);
+        radial-gradient(circle at 25% 35%,
+            rgba(1, 123, 141, 0.55) 0%,
+            rgba(1, 123, 141, 0.35) 25%,
+            transparent 60%),
+        linear-gradient(120deg,
+            rgba(1, 123, 141, 0.65) 45%,
+            rgba(131, 131, 131, 0.55) 100%);
     pointer-events: none;
 }
 
@@ -135,4 +135,24 @@
     .mfm-hero__scroll-indicator {
         bottom: 2rem;
     }
+}
+
+/* ===== LOGO ===== */
+
+.img-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.mfm-hero__logo {
+    width: 160px;
+    max-width: 40vw;
+    margin-bottom: 1.5rem;
+    
+    padding: 12px 20px;
+
+    background: rgba(247, 247, 247, 0.603);
+
+    border-radius: 12px;
+
 }
