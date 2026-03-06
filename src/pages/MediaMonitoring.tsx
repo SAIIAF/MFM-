@@ -25,25 +25,25 @@ const MediaMonitoring: React.FC = () => {
             /* HERO INTRO */
             const tl = gsap.timeline();
 
-            tl.from(".hero-title", {
+            tl.from(".media-hero-title", {
                 y: 100,
                 opacity: 0,
                 duration: 1.2,
                 ease: "power4.out",
             })
-                .from(".hero-subtitle", {
+                .from(".media-hero-subtitle", {
                     y: 60,
                     opacity: 0,
                     duration: 1,
                     ease: "power3.out",
                 }, "-=0.8")
-                .from(".lang-toggle", {
+                .from(".media-lang-toggle", {
                     y: 40,
                     opacity: 0,
                     duration: 0.8,
                     ease: "power2.out",
                 }, "-=0.7")
-                .from(".scroll-indicator", {
+                .from(".media-scroll-indicator", {
                     opacity: 0,
                     y: -20,
                     duration: 0.8,
@@ -52,7 +52,7 @@ const MediaMonitoring: React.FC = () => {
 
 
             /* GENERIC SECTION REVEAL */
-            gsap.utils.toArray<HTMLElement>(".reveal").forEach((section) => {
+            gsap.utils.toArray<HTMLElement>(".media-reveal").forEach((section) => {
                 gsap.from(section, {
                     opacity: 0,
                     y: 80,
@@ -67,7 +67,7 @@ const MediaMonitoring: React.FC = () => {
             });
 
             /* STAGGER ITEMS */
-            gsap.utils.toArray<HTMLElement>(".stagger-item").forEach((item) => {
+            gsap.utils.toArray<HTMLElement>(".media-stagger-item").forEach((item) => {
                 gsap.from(item, {
                     opacity: 0,
                     y: 60,
@@ -82,23 +82,23 @@ const MediaMonitoring: React.FC = () => {
             });
 
             /* PARTNER LOGO SCALE */
-            gsap.from(".partner-logo-wrapper", {
+            gsap.from(".media-partner-logo-wrapper", {
                 scale: 0.8,
                 opacity: 0,
                 duration: 1,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: ".partner-logo-wrapper",
+                    trigger: ".media-partner-logo-wrapper",
                     start: "top 80%",
                 }
             });
 
             /* PARALLAX HERO EFFECT */
-            gsap.to(".hero", {
+            gsap.to(".media-hero", {
                 backgroundPosition: "50% 70%",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: ".hero",
+                    trigger: ".media-hero",
                     start: "top top",
                     end: "bottom top",
                     scrub: true,
@@ -161,24 +161,24 @@ So, let's be clear, calmly, and without exaggeration. Media monitoring is data; 
     const arabicText = `رصد وسائل الإعلام بداية عمل العلاقات العامة...
     بعد أكثر من أربعين  عامًا من العمل في مجال قياس العلاقات العامة وتحليل وسائل الإعلام،  وجدت أن العمل في التخطيط لبرامج العلاقات العامة لابد أن يبدأ  برصد وسائل الإعلام، ولا ينتهي عنده. فهو يرصد ما قيل، وأين نُشر، ومن قاله، وأحيانًا مدى وضوح الرسالة أو انتشارها. هذه المعلومات مفيدة وضرورية. مع ذلك، فإن مجرد ذكر علامة تجارية لا يفسر تأثير هذا الذكر على التصورات أو الثقة أو السلوك. يبدأ قياس العلاقات العامة عندما نتجاوز مجرد إحصاء المخرجات ونبدأ في تفسير المعنى والأثر. هذا التمييز واضح في مبادئ برشلونة، التي تؤكد على ضرورة تركيز القياس على النتائج والأثر بدلاً من المخرجات وحدها, حيث  يوفر الرصد البيانات، بينما يوفر القياس رؤى ثاقبة. يغذي أحدهما الآخر.
 
-من أكثر الأخطاء شيوعاً بين وكالات العلاقات العامة وفرق العلامات التجارية هو الخلط بين الكم والقيمة. قد يبدو التقرير الشامل المليء بالمقاطع والانطباعات والوصول والرسوم البيانية مطمئناً، إذ يوحي بالتقدم والجهد المبذول. مع ذلك، تُظهر عقود من أبحاث التقييم أن النشاط لا يساوي الأثر، وأن المخرجات لا تُترجم تلقائياً إلى نتائج ،). قد تكون عملت سابقاً مع علامة تجارية شهيرة, والتي احتفت بظهور إعلامي مستمر لأشهر. ظاهرياً، وكانت الأرقام إيجابية. ومع ذلك، كشف تحليل معمق عن تحول سلبي تدريجي في توجهات شريحة رئيسية من المستهلكين. وفي حين أشارت المراقبة والرصد إلى استقرار الوضع، بينما كشف القياس عن تدهور بطيء في السمعة، كان من الممكن أن يتفاقم إلى أزمة كبيرة لو تم تجاهله.
+من أكثر الأخطاء شيوعاً بين وكالات العلاقات العامة وفرق العلامات التجارية هو الخلط بين الكم والقيمة. قد يبدو التقرير الشامل المليء بالمقاطع والانطباعات والوصول والرسوم البيانية مطمئناً، إذ يوحي بالتقدم والجهد المبذول. مع ذلك، تُظهر عقود من أبحاث التقييم أن النشاط لا يساوي الأثر، وأن المخرجات لا تُترجم تلقائياً إلى نتائج ）。 قد تكون عملت سابقاً مع علامة تجارية شهيرة, والتي احتفت بظهور إعلامي مستمر لأشهر. ظاهرياً، وكانت الأرقام إيجابية. ومع ذلك، كشف تحليل معمق عن تحول سلبي تدريجي في توجهات شريحة رئيسية من المستهلكين. وفي حين أشارت المراقبة والرصد إلى استقرار الوضع، بينما كشف القياس عن تدهور بطيء في السمعة، كان من الممكن أن يتفاقم إلى أزمة كبيرة لو تم تجاهله.
 
 ليست هذه مُنافسة بين الرصد والقياس، بل هما شريكان لا مُتنافسان. يُوفر الرصد المادة الخام، بينما يُحوّلها القياس إلى أدلة يُمكن لصناع القرار الوثوق بها. عندما يختلط الأمر بينهما، تفقد العلاقات العامة مصداقيتها. وعندما يعملان معًا، تُثبت العلاقات العامة جدارتها. هذه ليست نظرية، بل تجربة عملية مدعومة بالبحث والممارسة في مختلف القطاعات والأسواق.
 
-إذن، دعونا نكون واضحين، بهدوء ودون تهويل. رصد وسائل الإعلام هو بيانات، وقياس العلاقات العامة هو فهم عميق. يُخبرك أحدهما بما حدث، بينما يُخبرك الآخر بما يعنيه وما يجب فعله لاحقًا. إذا استمرينا في التعامل معهما على أنهما شيء واحد، فسنظل نطالب العلاقات العامة بإثبات قيمتها باستخدام أدوات خاطئة. هذه عادة لم يعد بإمكان المهنة تحملها.
+إذن، دعونا نكونواضحين، بهدوء ودون تهويل. رصد وسائل الإعلام هو بيانات، وقياس العلاقات العامة هو فهم عميق. يُخبرك أحدهما بما حدث، بينما يُخبرك الآخر بما يعنيه وما يجب فعله لاحقًا. إذا استمرينا في التعامل معهما على أنهما شيء واحد، فسنظل نطالب العلاقات العامة بإثبات قيمتها باستخدام أدوات خاطئة. هذه عادة لم يعد بإمكان المهنة تحملها.
 `;
 
     return (
         <div className="media-page" ref={pageRef}>
-            <section className="hero">
-                <div className="hero-overlay" />
-                <div className="hero-content">
-                    <h1 className="hero-title">Media Monitoring</h1>
-                    <p className="hero-subtitle">
+            <section className="media-hero">
+                <div className="media-hero-overlay" />
+                <div className="media-hero-content">
+                    <h1 className="media-hero-title">Media Monitoring</h1>
+                    <p className="media-hero-subtitle">
                         Measure, Analyze, and Optimize Your PR Impact
                     </p>
 
-                    <div className="lang-toggle">
+                    <div className="media-lang-toggle">
                         <button
                             className={lang === "en" ? "active" : ""}
                             onClick={() => switchLanguage("en")}
@@ -194,72 +194,111 @@ So, let's be clear, calmly, and without exaggeration. Media monitoring is data; 
                     </div>
 
                     <div
-                        className="scroll-indicator"
+                        className="media-scroll-indicator"
                         onClick={scrollToNextSection}
                         style={{ cursor: "pointer" }}
                     >
-                        <div className="scroll-arrow"></div>
+                        <div className="media-scroll-arrow"></div>
                     </div>
                 </div>
             </section>
 
-            <section className="content-section reveal" ref={nextSectionRef}>
-                <div className="container">
+            <section className="media-content-section media-reveal" ref={nextSectionRef}>
+                <div className="media-container">
                     <div
                         ref={contentRef}
-                        className={`content-text ${lang === "ar" ? "arabic" : ""}`}
+                        className={`media-content-text ${lang === "ar" ? "arabic" : ""}`}
                     >
-                        <h2 className="section-title">
+                        <h2 className="media-section-title">
                             {lang === "en"
                                 ? "The Foundation of Strategic Communications"
                                 : "أساس الاتصالات الاستراتيجية"}
                         </h2>
 
-                        <div className="text-content">
+                        <div className="media-text-content">
                             {lang === "en" ? englishText : arabicText}
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="partner-section reveal">
-                <div className="container">
-                    <h2 className="section-title">Our Strategic Partner</h2>
+            <section className="media-partner-section media-reveal">
+                <div className="media-container">
+                    <h2 className="media-section-title">Our Strategic Partner</h2>
 
-                    <div className="partner-content">
-                        <div className="partner-logo-wrapper">
+                    <div className="media-partner-content">
+                        <div className="media-partner-logo-wrapper">
                             <img
                                 src={partnerLogo}
                                 alt="Partner Logo"
-                                className="partner-logo"
+                                className="media-partner-logo"
                             />
                         </div>
 
-                        <div className="partner-description">
+                        <div className="media-partner-description">
                             <p>
                                 We proudly collaborate with strategic partners who enhance our ability to deliver data-driven PR insights and cutting-edge monitoring solutions across multiple markets. Together, we leverage advanced analytics, comprehensive media coverage, and deep industry expertise to help organizations navigate the complex media landscape with confidence and precision.
                             </p>
                         </div>
                     </div>
 
-                    <div className="partner-features">
-                        <div className="feature-item stagger-item">
-                            <div className="feature-icon">📊</div>
+                    <div className="media-partner-features">
+                        <div className="media-feature-item media-stagger-item">
+                            <div className="media-feature-icon">📊</div>
                             <h4>Advanced Analytics</h4>
                             <p>Real-time insights and reporting</p>
                         </div>
 
-                        <div className="feature-item stagger-item">
-                            <div className="feature-icon">🌍</div>
+                        <div className="media-feature-item media-stagger-item">
+                            <div className="media-feature-icon">🌍</div>
                             <h4>Global Coverage</h4>
                             <p>Media monitoring across regions</p>
                         </div>
 
-                        <div className="feature-item stagger-item">
-                            <div className="feature-icon">🎯</div>
+                        <div className="media-feature-item media-stagger-item">
+                            <div className="media-feature-icon">🎯</div>
                             <h4>Strategic Intelligence</h4>
                             <p>Actionable insights</p>
-                        </div> </div> </div> </section> <section className="presentations-section reveal"> <div className="container"> <h2 className="section-title">Resources & Presentations</h2> <p className="section-subtitle"> Explore our comprehensive materials and insights </p> <div className="presentation-cards"> <div className="presentation-card stagger-item"> <div className="card-header"> <div className="card-icon">📄</div> <span className="card-badge">AR</span> </div> <h3>نظرة شاملة عن الخدمة</h3> <p className="card-description"> عرض تقديمي مفصل باللغة العربية يوضح خدمات الرصد الإعلامي والقيمة المضافة لعملك </p> <div className="card-footer"> <button className="btn-primary" onClick={() => handlePresentationView(presentationAR)} > عرض التقديم </button> </div> </div> <div className="presentation-card stagger-item"> <div className="card-header"> <div className="card-icon">📄</div> <span className="card-badge">EN</span> </div> <h3>Comprehensive Service Overview</h3> <p className="card-description"> Detailed English presentation showcasing our media monitoring services and the value we bring to your organization </p> <div className="card-footer"> <button className="btn-primary" onClick={() => handlePresentationView(presentationEN)} > View Presentation </button> </div> </div> </div> </div> </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="media-presentations-section media-reveal">
+                <div className="media-container">
+                    <h2 className="media-section-title">Resources & Presentations</h2>
+                    <p className="media-section-subtitle"> Explore our comprehensive materials and insights </p>
+                    <div className="media-presentation-cards">
+                        <div className="media-presentation-card media-stagger-item">
+                            <div className="media-card-header">
+                                <div className="media-card-icon">📄</div>
+                                <span className="media-card-badge">AR</span>
+                            </div>
+                            <h3>نظرة شاملة عن الخدمة</h3>
+                            <p className="media-card-description"> عرض تقديمي مفصل باللغة العربية يوضح خدمات الرصد الإعلامي والقيمة المضافة لعملك </p>
+                            <div className="media-card-footer">
+                                <button className="media-btn-primary" onClick={() => handlePresentationView(presentationAR)} >
+                                    عرض التقديم
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="media-presentation-card media-stagger-item">
+                            <div className="media-card-header">
+                                <div className="media-card-icon">📄</div>
+                                <span className="media-card-badge">EN</span>
+                            </div>
+                            <h3>Comprehensive Service Overview</h3>
+                            <p className="media-card-description"> Detailed English presentation showcasing our media monitoring services and the value we bring to your organization </p>
+                            <div className="media-card-footer">
+                                <button className="media-btn-primary" onClick={() => handlePresentationView(presentationEN)} >
+                                    View Presentation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <Footer />
         </div>
@@ -267,3 +306,4 @@ So, let's be clear, calmly, and without exaggeration. Media monitoring is data; 
 };
 
 export default MediaMonitoring;
+

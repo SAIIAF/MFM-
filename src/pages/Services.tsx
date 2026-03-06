@@ -80,12 +80,12 @@ const ServicesPage: React.FC = () => {
 
             heroTl
                 .fromTo(
-                    ".hero-content h1",
+                    ".services-hero-content h1",
                     { y: 80, scale: 0.95, autoAlpha: 0 },
                     { y: 0, scale: 1, autoAlpha: 1, duration: 1.4, ease: "expo.out" }
                 )
                 .fromTo(
-                    ".hero-content p",
+                    ".services-hero-content p",
                     { y: 40, autoAlpha: 0 },
                     { y: 0, autoAlpha: 1, duration: 1.2, ease: "power2.out" },
                     "-=0.8"
@@ -95,20 +95,20 @@ const ServicesPage: React.FC = () => {
 
             const sectionTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".content-section",
+                    trigger: ".services-content-section",
                     start: "top 75%",
                     toggleActions: "play none none none",
                 },
             });
 
             sectionTl.fromTo(
-                ".image-grid",
+                ".services-image-grid",
                 { x: -120, autoAlpha: 0 },
                 { x: 0, autoAlpha: 1, duration: 1.4, ease: "power3.out" }
             );
 
             sectionTl.fromTo(
-                ".text-content",
+                ".services-text-content",
                 { x: 120, autoAlpha: 0 },
                 { x: 0, autoAlpha: 1, duration: 1.4, ease: "power3.out" },
                 "-=1.1"
@@ -121,17 +121,17 @@ const ServicesPage: React.FC = () => {
 
     return (
         <>
-            <div className="about-page" ref={pageRef}>
+            <div className="services-page" ref={pageRef}>
 
                 {/* HERO */}
-                <section className="hero-section">
-                    <video autoPlay muted loop playsInline className="hero-video">
+                <section className="services-hero-section">
+                    <video autoPlay muted loop playsInline className="services-hero-video">
                         <source src="/video/back.mp4" type="video/mp4" />
                     </video>
 
-                    <div className="overlay" />
+                    <div className="services-overlay" />
 
-                    <div className="hero-content">
+                    <div className="services-hero-content">
                         <h1>What we do</h1>
                         <p>
                             SECTOR EXPERTISE From public relations to marketing and social media,
@@ -142,9 +142,9 @@ const ServicesPage: React.FC = () => {
                 </section>
 
                 {/* CONTENT */}
-                <section className="content-section">
-                    <div className="content-grid">
-                        <div className="image-grid">
+                <section className="services-content-section">
+                    <div className="services-content-grid">
+                        <div className="services-image-grid">
                             <img src={about1} alt="" />
                             <img src={about2} alt="" />
                             <img src={about3} alt="" />
@@ -153,9 +153,9 @@ const ServicesPage: React.FC = () => {
                             <img src={about4} alt="" />
                         </div>
 
-                        <div className="text-content">
+                        <div className="services-text-content">
                             <h2>Writing remains the key to public relations</h2>
-                            <p className="intro">
+                            <p className="services-intro">
                                 Writing remains the key to public relations.
                                 Communication – effective writing and speaking –
                                 is the essence of the practice of public relations.
@@ -165,22 +165,22 @@ const ServicesPage: React.FC = () => {
                 </section>
 
                 {/* SERVICES */}
-                <section className="our-services">
-                    <h2 className="sectionservices-title">Our Services</h2>
+                <section className="services-our-services">
+                    <h2 className="services-sectionservices-title">Our Services</h2>
                     <div className="services-grid">
                         {services.map((service, index) =>
                             service.path ? (
                                 <Link
                                     key={index}
                                     to={service.path}
-                                    className="service-card"
+                                    className="services-card"
                                 >
-                                    <div className="icon-circle">{service.icon}</div>
+                                    <div className="services-icon-circle">{service.icon}</div>
                                     <h3>{service.title}</h3>
                                 </Link>
                             ) : (
-                                <div key={index} className="service-card">
-                                    <div className="icon-circle">{service.icon}</div>
+                                <div key={index} className="services-card">
+                                    <div className="services-icon-circle">{service.icon}</div>
                                     <h3>{service.title}</h3>
                                 </div>
                             )
@@ -189,8 +189,8 @@ const ServicesPage: React.FC = () => {
                 </section>
 
                 {/* CENTER VIDEO */}
-                <section className="center-video-section">
-                    <div className="center-video-wrapper">
+                <section className="services-center-video-section">
+                    <div className="services-center-video-wrapper">
                         <video autoPlay muted loop playsInline>
                             <source src="/video/back.mp4" type="video/mp4" />
                         </video>
@@ -205,3 +205,4 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+

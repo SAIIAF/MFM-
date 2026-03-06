@@ -4,9 +4,7 @@ import "../styles/aboutpage.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import img1 from "../assets/images/about/abot1.jpg";
-import img2 from "../assets/images/about/about2.jpg";
-import img3 from "../assets/images/about/about3.jpg";
+import img from "../assets/images/about/about3.jpg";
 
 import g1 from "../assets/images/about/abot1.jpg";
 import g2 from "../assets/images/about/about2.jpg";
@@ -63,20 +61,20 @@ const About = () => {
         const ctx = gsap.context(() => {
 
             // HERO
-            gsap.from(".hero-title", {
+            gsap.from(".about-hero-title", {
                 y: -80,
                 opacity: 0,
                 duration: 1.2,
             });
 
-            gsap.from(".hero-text p", {
+            gsap.from(".about-hero-text p", {
                 y: 40,
                 opacity: 0,
                 stagger: 0.3,
                 duration: 1,
             });
 
-            gsap.to(".hero-video", {
+            gsap.to(".about-hero-video", {
                 y: 100,
                 scrollTrigger: {
                     trigger: heroRef.current,
@@ -88,9 +86,9 @@ const About = () => {
 
             // SECTION 2
             if (section2Ref.current) {
-                const images = section2Ref.current.querySelectorAll(".image-box");
+                const images = section2Ref.current.querySelectorAll(".about-image-box");
                 const textItems =
-                    section2Ref.current.querySelectorAll(".text-content > *");
+                    section2Ref.current.querySelectorAll(".about-text-content > *");
 
                 gsap.from(images, {
                     x: -100,
@@ -119,10 +117,10 @@ const About = () => {
             // SECTION 3
             if (section3Ref.current) {
                 const experienceBox =
-                    section3Ref.current.querySelector(".experience-box");
+                    section3Ref.current.querySelector(".about-experience-box");
 
                 const experienceText =
-                    section3Ref.current.querySelectorAll(".experience-text > *");
+                    section3Ref.current.querySelectorAll(".about-experience-text > *");
 
                 if (experienceBox) {
                     gsap.from(experienceBox, {
@@ -158,7 +156,7 @@ const About = () => {
                     countRef.current,
                     { innerText: 0 },
                     {
-                        innerText: 30,
+                        innerText: 40,
                         duration: 2,
                         snap: { innerText: 1 },
                         scrollTrigger: {
@@ -172,7 +170,7 @@ const About = () => {
             // SECTION 4
             if (projectsRef.current) {
                 const thumbs =
-                    projectsRef.current.querySelectorAll(".thumb");
+                    projectsRef.current.querySelectorAll(".about-thumb");
 
                 gsap.fromTo(
                     thumbs,
@@ -201,76 +199,70 @@ const About = () => {
             <Navbar />
 
             {/* HERO */}
-            <section className="hero" ref={heroRef}>
-                <video autoPlay muted loop playsInline className="hero-video">
+            <section className="about-hero" ref={heroRef}>
+                <video autoPlay muted loop playsInline className="about-hero-video">
                     <source src="/video/back.mp4" type="video/mp4" />
                 </video>
-                <div className="overlay" />
-                <div className="hero-content">
-                    <h1 className="hero-title">Our Team</h1>
-                    <div className="hero-text">
-                        <p>mfm (Marketing Facility Management– the company with more than 30 years’ experience in Egypt, Qatar, UAE, and KSA as
-                            an Integrated marketing communications and Public Relations firm.</p>
-                        <p>We have an enviable list of clients across many sectors, all with one thing in common – the desire to maximize thei
-                            returns through relevant, engaging, results-driven marketing.</p>
-                        <p>Our aim is simple: to win trust and business with original ideas that excite and engage through Business, Sports
-                            Entertainment, and CSR initiatives.</p>
+                <div className="about-overlay" />
+                <div className="about-hero-content">
+                    <h1 className="about-hero-title">mfm-Egypt <br /> <span>(Marketing Facility Management)</span></h1>
+                    <div className="about-hero-text">
+                        <p>the company with more than 40 years’ experience in Egypt, Qatar, UAE, and KSA as an Integrated marketing communications and Public Relations firm. We have an enviable list of clients across many sectors, all with one thing in common – the desire to maximize their returns through relevant, engaging, results-driven marketing.  Our aim is simple: to win trust and business with original ideas that excite and engage through Business, Sports, Entertainment, and CSR initiatives.</p>
                     </div>
                 </div>
             </section>
 
             {/* SECTION 2 */}
-            <section className="section-two" ref={section2Ref}>
-                <div className="images">
-                    <div className="image-box"><img src={img1} alt="" /></div>
-                    <div className="image-box"><img src={img2} alt="" /></div>
-                    <div className="image-box"><img src={img3} alt="" /></div>
+            <section className="about-section-two" ref={section2Ref}>
+                <div className="about-images">
+
+                    <div className="about-image-box"><img src={img} alt="" /></div>
                 </div>
-                <div className="text-content">
+                <div className="about-text-content">
                     <h2>Marketing Facility Management</h2>
+                    <h3>We believe that we live in a real-time world, which demands real-time agencies.</h3>
+                    <br />
+                    <p>In today’s world, change is constant and complexity is ever-growing. Organizations need communications partners to provide senior counsel and data-driven solutions to protect their brands and drive business results. mfm agency SAVE model was created to do just that.</p>
+                    <br />
                     <h3>Our Approach</h3>
-                    <p>In today’s world, change is constant and complexity
-                        is ever-growing. Organizations need
-                        communications partners to provide senior
-                        counsel and data-driven solutions to protect their
-                        brands and drive business results. mfm agency
-                        SAVE model was created to do just that.</p>
+                    <br />
+                    <p>Our approach is based on The SAVE model which is a marketing framework that focuses on providing solutions to customers and stakeholders, making products and services accessible, demonstrating value, and educating all stakeholders. It is a more customer-centric approach to marketing public relations than the traditional 4Ps (product, price, place, and promotion).</p>
                 </div>
             </section>
 
             {/* SECTION 3 */}
-            <section className="section-three" ref={section3Ref}>
-                <div className="experience-box">
+            <section className="about-section-three" ref={section3Ref}>
+                <div className="about-experience-box">
                     <h1>+<span ref={countRef}>0</span></h1>
                     <p>Years of Experience</p>
                 </div>
 
-                <div className="experience-text">
+                <div className="about-experience-text">
                     <span>Why Choose Us?</span>
                     <h2>Focus On Getting Our Jobs Done Quickly</h2>
                     <p>
-                        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu
-                        erat, accumsan id imperdiet et, porttitor at sem.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu
-                        erat, accumsan id imperdiet et, porttitor at sem.
+                        By prioritizing solutions, ensuring accessibility, emphasizing value, and leading with education, your business can cultivate deeper, more meaningful relationships with your clients and position themselves as indispensable partners rather than just vendors.
                     </p>
+                    <br />
+                    <p>MFM-Egypt helps Egypt’s Businesses develop tailored marketing communications solutions to drive success in national and international markets. Call us today to learn more.</p>
                 </div>
             </section>
 
             {/* SECTION 4 */}
-            <section className="projects-section" ref={projectsRef}>
-                <h2 className="projects-title">Our Projects</h2>
+            <section className="about-projects-section" ref={projectsRef}>
+                <h2 className="about-projects-title">Our Projects</h2>
 
-                <div className="main-slider">
-                    <button className="nav left" onClick={prevSlide}>‹</button>
-                    <img ref={mainImageRef} src={galleryImages[activeIndex]} className="main-image" alt="" />
-                    <button className="nav right" onClick={nextSlide}>›</button>
+                <div className="about-main-slider">
+                    <button className="about-nav left" onClick={prevSlide}>‹</button>
+                    <img ref={mainImageRef} src={galleryImages[activeIndex]} className="about-main-image" alt="" />
+                    <button className="about-nav right" onClick={nextSlide}>›</button>
                 </div>
 
-                <div className="thumbnail-row">
+                <div className="about-thumbnail-row">
                     {galleryImages.map((img, index) => (
                         <div
                             key={index}
-                            className={`thumb ${index === activeIndex ? "active" : ""}`}
+                            className={`about-thumb ${index === activeIndex ? "active" : ""}`}
                             onClick={() => changeSlide(index)}
                         >
                             <img src={img} alt="" />
@@ -285,3 +277,4 @@ const About = () => {
 };
 
 export default About;
+

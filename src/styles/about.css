@@ -72,6 +72,10 @@
     gap: 2rem;
 }
 
+.about-image-wrapper:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
 .about-image-wrapper {
     position: relative;
     overflow: hidden;

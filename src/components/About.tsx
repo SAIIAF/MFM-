@@ -6,6 +6,7 @@ import '../styles/about.css';
 // ✅ Import images from local assets
 import aboutImage1 from '../assets/images/about/abot1.jpg';
 import aboutImage2 from '../assets/images/about/about3.jpg';
+import aboutImage3 from '../assets/images/about/about2.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,7 +104,17 @@ const About = () => {
                             className="about-image"
                         />
                     </div>
+                    
+                    <div className="about-image-wrapper">
+                        <img
+                            src={aboutImage3}
+                            alt="About Us 3"
+                            className="about-image"
+                            />
+                    </div>
 
+                    
+                    
                 </div>
             </div>
         </section>

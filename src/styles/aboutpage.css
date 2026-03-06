@@ -7,13 +7,13 @@
 
 /* ================= HERO ================= */
 
-.hero {
+.about-hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-.hero-video {
+.about-hero-video {
     position: absolute;
     width: 100%;
     height: 120%;
@@ -22,7 +22,7 @@
     left: 0;
 }
 
-.overlay {
+.about-overlay {
     position: absolute;
     inset: 0;
     background:
@@ -35,19 +35,19 @@
             rgba(131, 131, 131, 0.55) 100%);
 }
 
-.hero-content {
+.about-hero-content {
     position: relative;
     z-index: 2;
     color: #ffffff;
     max-width: 850px;
     margin: auto;
-    top: 30%;
+    top: 53%;
     transform: translateY(-50%);
     text-align: center;
     padding: 0 20px;
 }
 
-.hero-title {
+.about-hero-title {
     font-size: 60px;
     margin-bottom: 25px;
     color: #ffffff;
@@ -55,71 +55,76 @@
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-.hero-text p {
+.about-hero-title span {
+    font-size: 27px;
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+    opacity: 0.85;
+}
+
+.about-hero-text p {
     margin-bottom: 18px;
     line-height: 1.7;
-    font-size: 17px;
+    font-size: 18px;
     opacity: 0.95;
 }
 
 /* ================= SECTION 2 ================= */
 
-.section-two {
+.about-section-two {
     display: flex;
-    padding: 140px 10%;
+    padding: 100px 10%;
     gap: 80px;
     align-items: center;
     background: #ffffff;
 }
 
-.images {
+.about-images {
     flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 250px 280px;
     gap: 20px;
 }
 
-.image-box:nth-child(3) {
+.about-image-box:nth-child(3) {
     grid-column: 1 / -1;
 }
 
-.image-box {
+.about-image-box {
     overflow: hidden;
     border-radius: 16px;
     position: relative;
 }
 
-.image-box img {
+.about-image-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
-.image-box:hover img {
+.about-image-box:hover img {
     transform: scale(1.08);
 }
 
-.text-content {
+.about-text-content {
     flex: 1;
     text-align: start;
 }
 
-.text-content h2 {
+.about-text-content h2 {
     font-size: 48px;
     color: #017B8D;
     line-height: 1.2;
     margin-bottom: 10px;
 }
 
-.text-content h3 {
+.about-text-content h3 {
     margin: 0;
     color: #017B8D;
     font-weight: 600;
 }
 
-.text-content p {
+.about-text-content p {
     line-height: 1.8;
     font-size: 16px;
     color: #000000;
@@ -128,7 +133,7 @@
 
 /* ================= SECTION 3 ================= */
 
-.section-three {
+.about-section-three {
     display: flex;
     padding: 160px 10%;
     gap: 100px;
@@ -136,7 +141,7 @@
     background: #017B8D;
 }
 
-.experience-box {
+.about-experience-box {
     flex: 0 0 50%;
     background: #ffffff;
     color: #017B8D;
@@ -147,33 +152,33 @@
     transition: transform 0.4s ease;
 }
 
-.experience-box:hover {
+.about-experience-box:hover {
     transform: translateY(-10px);
 }
 
-.experience-box h1 {
+.about-experience-box h1 {
     font-size: 120px;
     margin-bottom: 20px;
     line-height: 1;
 }
 
-.experience-box p {
+.about-experience-box p {
     font-size: 20px;
     letter-spacing: 1px;
 }
 
-.experience-text {
+.about-experience-text {
     flex: 1;
     color: #ffffff;
 }
 
-.experience-text h2 {
+.about-experience-text h2 {
     font-size: 42px;
     margin: 25px 0;
     color: #ffffff;
 }
 
-.experience-text p {
+.about-experience-text p {
     font-size: 18px;
     line-height: 1.8;
     color: #ffffff;
@@ -182,13 +187,13 @@
 
 /* ================= PROJECTS ================= */
 
-.projects-section {
+.about-projects-section {
     padding: 140px 10%;
     background: #ffffff;
     text-align: center;
 }
 
-.projects-title {
+.about-projects-title {
     font-size: 60px;
     margin-bottom: 50px;
     font-weight: 600;
@@ -197,7 +202,7 @@
 
 /* ================= MAIN SLIDER ================= */
 
-.main-slider {
+.about-main-slider {
     position: relative;
     max-width: 1050px;
     margin: auto;
@@ -205,14 +210,14 @@
     border-radius: 12px;
 }
 
-.main-image {
+.about-main-image {
     width: 100%;
     height: 520px;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
-.nav {
+.about-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -227,17 +232,17 @@
     z-index: 5;
 }
 
-.nav.left {
+.about-nav.left {
     left: 15px;
 }
 
-.nav.right {
+.about-nav.right {
     right: 15px;
 }
 
 /* ================= THUMBNAILS ================= */
 
-.thumbnail-row {
+.about-thumbnail-row {
     margin: 30px auto 0;
     max-width: 1050px;
     display: flex;
@@ -248,7 +253,7 @@
     padding-bottom: 10px;
 }
 
-.thumb {
+.about-thumb {
     flex: 0 0 auto;
     width: 140px;
     height: 90px;
@@ -259,7 +264,7 @@
     transition: all 0.3s ease;
 }
 
-.thumb img {
+.about-thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -269,60 +274,68 @@
 
 @media (max-width: 1024px) {
 
-    .section-two,
-    .section-three {
+    .about-section-two,
+    .about-section-three {
         flex-direction: column;
         padding: 100px 5%;
         gap: 50px;
         text-align: center;
     }
 
-    .experience-box {
+    .about-experience-box {
         flex: none;
         width: 100%;
         padding: 80px 40px;
     }
 
-    .hero-title {
+    .about-hero-title {
         font-size: 45px;
     }
 
-    .projects-title {
+    .about-projects-title {
         font-size: 45px;
     }
 
-    .main-image {
+    .about-main-image {
         height: 400px;
     }
 }
 
 @media (max-width: 768px) {
 
-    .hero-title {
+    .about-hero-title {
         font-size: 32px;
     }
 
-    .hero-text p {
+    .about-hero-text p {
         font-size: 14px;
     }
 
-    .text-content h2 {
+        .about-hero-title span {
+        font-size: 20px;
+        display: block;
+        margin-top: 10px;
+        color: #ffffff;
+        opacity: 0.85;
+        }
+
+    .about-text-content h2 {
         font-size: 30px;
     }
 
-    .experience-box h1 {
+    .about-experience-box h1 {
         font-size: 70px;
     }
 
-    .experience-text h2 {
+    .about-experience-text h2 {
         font-size: 28px;
     }
 
-    .main-image {
+    .about-main-image {
         height: 300px;
     }
 
-    .thumb {
+    .about-thumb {
         width: 110px;
         height: 70px;
     }
@@ -330,25 +343,49 @@
 
 @media (max-width: 480px) {
 
-    .hero {
+    .about-hero {
         height: 80vh;
     }
 
-    .hero-title {
+    .about-hero-title {
         font-size: 24px;
     }
 
-    .projects-title {
+    .about-hero-title span {
+        font-size: 20px;
+        display: block;
+        margin-top: 10px;
+        color: #ffffff;
+        opacity: 0.85;
+        }
+
+    .about-projects-title {
         font-size: 30px;
     }
 
-    .main-image {
+    .about-main-image {
         height: 240px;
     }
 
-    .section-two,
-    .section-three,
-    .projects-section {
+    .about-section-two,
+    .about-section-three,
+    .about-projects-section {
         padding: 70px 5%;
     }
+}
+@media (max-width: 380px) {
+
+    .about-hero-content {
+        top: 60%;
+    }
+
+    .about-hero-title span {
+        font-size: 15px;
+        display: block;
+        margin-top: 10px;
+        color: #ffffff;
+        opacity: 0.85;
+        }
+
+    
 }
