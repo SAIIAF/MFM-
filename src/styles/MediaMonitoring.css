@@ -114,10 +114,8 @@ html {
 
 .media-scroll-indicator {
     position: absolute;
-    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    /* animation: bounce 2s infinite; */
 }
 
 .media-scroll-arrow {
@@ -531,9 +529,7 @@ html {
         font-size: 1.5rem;
     }
 
-    .media-scroll-indicator {
-        bottom: 30px;
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -605,7 +601,7 @@ html {
     }
 
     .media-scroll-indicator {
-        display: none;
+        display: block;
     }
 }
 

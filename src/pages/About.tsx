@@ -217,7 +217,7 @@ const About = () => {
 
             {/* SECTION 2 */}
             <section className="about-section-two" ref={section2Ref}>
-                <div className="about-images">
+                <div className="about-imagess">
 
                     <div className="about-image-box"><img src={img} alt="" /></div>
                 </div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/about.css';
@@ -11,6 +12,8 @@ import aboutImage3 from '../assets/images/about/about2.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+    const navigate = useNavigate(); // ✅ مهم
+
     const textRef = useRef<HTMLDivElement>(null);
     const imagesRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -81,7 +84,11 @@ const About = () => {
                         and KSA.
                     </p>
 
-                    <button className="about-button">
+                    {/* ✅ الزرار بعد التعديل */}
+                    <button
+                        className="about-button"
+                        onClick={() => navigate("/about")}
+                    >
                         Learn More
                     </button>
                 </div>
@@ -104,17 +111,15 @@ const About = () => {
                             className="about-image"
                         />
                     </div>
-                    
+
                     <div className="about-image-wrapper">
                         <img
                             src={aboutImage3}
                             alt="About Us 3"
                             className="about-image"
-                            />
+                        />
                     </div>
 
-                    
-                    
                 </div>
             </div>
         </section>

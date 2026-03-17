@@ -9,8 +9,8 @@ import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import News from "./pages/News";
 import WhitePaper from "./pages/WhitePaper";
-import MediaMonitoring from "./pages/MediaMonitoring";
-
+import MediaMonitoring from "./pages//MediaMonitoring";
+import InfluencersMarketing from "./pages/InfluencersMarketing";
 function App() {
   return (
     <Router>
@@ -18,7 +18,7 @@ function App() {
 
       <div className="min-h-screen">
         <Navbar />
-        
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,8 +27,8 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/news" element={<News />} />
           <Route path="/white-paper" element={<WhitePaper />} />
-
           <Route path="/media-monitoring" element={<MediaMonitoring />} />
+          <Route path="/influencers-marketing" element={<InfluencersMarketing />} />
         </Routes>
       </div>
     </Router>

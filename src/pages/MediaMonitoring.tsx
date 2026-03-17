@@ -16,107 +16,77 @@ const MediaMonitoring: React.FC = () => {
     const [lang, setLang] = useState<"en" | "ar">("en");
 
     /* ===============================
-       HERO + SCROLL ANIMATIONS
+    HERO + SCROLL ANIMATIONS
     =============================== */
 
     useEffect(() => {
-        const ctx = gsap.context(() => {
+        // تأجيل GSAP شويه بعد render لتخفيف تحميل الصفحة
+        const timer = setTimeout(() => {
+            const ctx = gsap.context(() => {
 
-            /* HERO INTRO */
-            const tl = gsap.timeline();
+                /* ================= HERO ANIMATION ================= */
+                const tl = gsap.timeline();
+                tl.from(".media-hero-title", { y: 100, opacity: 0, duration: 1.2, ease: "power4.out" })
+                    .from(".media-hero-subtitle", { y: 60, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+                    .from(".media-lang-toggle", { y: 40, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.7")
+                    .from(".media-scroll-indicator", { opacity: 0, y: -20, duration: 0.8, ease: "power2.out" }, "-=0.6");
 
-            tl.from(".media-hero-title", {
-                y: 100,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out",
-            })
-                .from(".media-hero-subtitle", {
-                    y: 60,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power3.out",
-                }, "-=0.8")
-                .from(".media-lang-toggle", {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power2.out",
-                }, "-=0.7")
-                .from(".media-scroll-indicator", {
-                    opacity: 0,
-                    y: -20,
-                    duration: 0.8,
-                    ease: "power2.out",
-                }, "-=0.6");
-
-
-            /* GENERIC SECTION REVEAL */
-            gsap.utils.toArray<HTMLElement>(".media-reveal").forEach((section) => {
-                gsap.from(section, {
-                    opacity: 0,
-                    y: 80,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    scrollTrigger: {
+                /* ================= SECTION REVEAL (Lazy ScrollTrigger) ================= */
+                gsap.utils.toArray<HTMLElement>(".media-reveal").forEach((section) => {
+                    ScrollTrigger.create({
                         trigger: section,
                         start: "top 80%",
-                        toggleActions: "play none none reverse",
-                    }
+                        onEnter: () => {
+                            gsap.fromTo(section, { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+                        },
+                    });
                 });
-            });
 
-            /* STAGGER ITEMS */
-            gsap.utils.toArray<HTMLElement>(".media-stagger-item").forEach((item) => {
-                gsap.from(item, {
-                    opacity: 0,
-                    y: 60,
-                    duration: 0.8,
-                    ease: "power3.out",
-                    scrollTrigger: {
+                /* ================= STAGGER ITEMS ================= */
+                gsap.utils.toArray<HTMLElement>(".media-stagger-item").forEach((item) => {
+                    ScrollTrigger.create({
                         trigger: item,
                         start: "top 85%",
-                        toggleActions: "play none none reverse",
-                    }
+                        onEnter: () => {
+                            gsap.fromTo(item, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
+                        },
+                    });
                 });
-            });
 
-            /* PARTNER LOGO SCALE */
-            gsap.from(".media-partner-logo-wrapper", {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".media-partner-logo-wrapper",
-                    start: "top 80%",
+                /* ================= PARTNER LOGO SCALE ================= */
+                const logoWrapper = document.querySelector(".media-partner-logo-wrapper");
+                if (logoWrapper) {
+                    ScrollTrigger.create({
+                        trigger: logoWrapper,
+                        start: "top 80%",
+                        onEnter: () => {
+                            gsap.fromTo(logoWrapper, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 1, ease: "power3.out" });
+                        },
+                    });
                 }
-            });
 
-            /* PARALLAX HERO EFFECT */
-            gsap.to(".media-hero", {
-                backgroundPosition: "50% 70%",
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".media-hero",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true,
-                }
-            });
+                /* ================= PARALLAX HERO ================= */
+                gsap.to(".media-hero", {
+                    backgroundPosition: "50% 70%",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".media-hero",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true,
+                    },
+                });
 
-        }, pageRef);
+            }, pageRef);
 
-        return () => ctx.revert();
+            return () => ctx.revert();
+        }, 50); // 50ms بعد render
+        return () => clearTimeout(timer);
     }, []);
 
-    /* ===============================
-       LANGUAGE SWITCH ANIMATION
-    =============================== */
-
+    /* ================= LANGUAGE SWITCH ================= */
     const switchLanguage = (newLang: "en" | "ar") => {
         if (lang === newLang) return;
-
         gsap.to(contentRef.current, {
             opacity: 0,
             y: 20,
@@ -134,10 +104,7 @@ const MediaMonitoring: React.FC = () => {
     };
 
     const scrollToNextSection = () => {
-        nextSectionRef.current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
+        nextSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
     const handlePresentationView = (url: string) => {
@@ -145,7 +112,7 @@ const MediaMonitoring: React.FC = () => {
     };
 
     /* ===============================
-       TEXT CONTENT
+    TEXT CONTENT
     =============================== */
 
     const englishText = `Media monitoring is the starting point for Public Relations work...

@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 
 import about1 from "../assets/images/about/abot1.jpg";
 import about2 from "../assets/images/about/about2.jpg";
-import about3 from "../assets/images/about/about2.jpg";
-import about4 from "../assets/images/about/about2.jpg";
+import about3 from "../assets/images/about/about3.jpg";
+import about4 from "../assets/images/about/abot1.jpg";
 
 import {
     FaAd,
@@ -27,6 +27,7 @@ import {
     FaClipboardCheck,
     FaBuilding,
     FaAward,
+    FaUsers,
 } from "react-icons/fa";
 
 import gsap from "gsap";
@@ -50,14 +51,11 @@ const services: Service[] = [
     { title: "Event Creation, Management", icon: <FaCalendarCheck /> },
     { title: "Exhibitions & Retail Display", icon: <FaStoreAlt /> },
     { title: "Hospitality Services", icon: <FaConciergeBell /> },
-
-    // ✅ الخدمة المطلوبة
     {
         title: "Media Monitoring Service",
         icon: <FaSearch />,
         path: "/media-monitoring",
     },
-
     { title: "Merchandise and Giveaways", icon: <FaGift /> },
     { title: "MOVIE and Entertainment Placement", icon: <FaFilm /> },
     { title: "Overlay, Fit out & showcasing", icon: <FaTools /> },
@@ -66,6 +64,11 @@ const services: Service[] = [
     { title: "Retail Executions Monitoring", icon: <FaClipboardCheck /> },
     { title: "Shopping centres Service", icon: <FaBuilding /> },
     { title: "Sponsorship Activation & Rights Management", icon: <FaAward /> },
+    {
+        title: "Influencers Marketing Campaigns",
+        icon: <FaUsers />,
+        path: "/influencers-marketing"
+    },
 ];
 
 const ServicesPage: React.FC = () => {
