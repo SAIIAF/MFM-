@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import latestImage from "../assets/images/896a3483-1.png";
@@ -11,6 +12,7 @@ const LatestSection = () => {
     const titleRef = useRef<HTMLHeadingElement | null>(null);
     const textRef = useRef<HTMLParagraphElement | null>(null);
     const imageRef = useRef<HTMLDivElement | null>(null);
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -78,6 +80,14 @@ const LatestSection = () => {
                         engage audiences, and deliver measurable impact. Every detail is
                         designed with purpose and executed with excellence.
                     </p>
+
+                    {/* ================= LEARN MORE BUTTON ================= */}
+                    <button
+                        className="ourlatest-btn"
+                        onClick={() => navigate("/events")} // <-- put the page route here
+                    >
+                        Learn more
+                    </button>
                 </div>
             </div>
         </section>

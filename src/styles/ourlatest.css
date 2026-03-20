@@ -67,6 +67,47 @@
     color: #ffffff;
 }
 
+/* Our Latest Button */
+.ourlatest-btn {
+    margin-top: 2rem;
+    background-color: #05aab6;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(1, 104, 112, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover animation */
+.ourlatest-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 120%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.ourlatest-btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.ourlatest-btn:hover {
+    background-color: #017b8d;
+    box-shadow: 0 8px 20px rgba(35, 139, 146, 0.5);
+}
+
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 992px) {
