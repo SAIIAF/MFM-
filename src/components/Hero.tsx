@@ -68,7 +68,7 @@ const Hero = () => {
                     Marketing Facility Management
                 </h1>
                 <p ref={paragraphRef} className="mfm-hero__subtitle">
-                    The company with more than 30 years experience in Egypt, Qatar, and KSA
+                    The company with more than 40 years experience in Egypt, Qatar, and KSA
                     as an integrated marketing communications and public relations firm.
                 </p>
             </div>

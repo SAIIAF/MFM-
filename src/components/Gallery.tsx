@@ -48,8 +48,8 @@ const Gallery = () => {
                 ease: 'none',
                 scrollTrigger: {
                     trigger: container,
-                    start: 'top top',        // ✅ يبدأ لما السكشن يبقى ظاهر بالكامل
-                    end: `+=${distance}`,    // ✅ يخلص لما الصور تخلص فعليًا
+                    start: 'top top',        
+                    end: `+=${distance}`,
                     pin: true,
                     scrub: 1,
                     anticipatePin: 1,

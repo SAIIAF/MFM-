@@ -71,20 +71,19 @@ const About = () => {
                     <h2 ref={titleRef} className="about-title">About Us</h2>
 
                     <p className="about-description">
-                        With over 30 years of excellence in marketing facility management,
+                        With over 40 years of excellence in marketing facility management,
                         we have established ourselves as a leading integrated marketing
                         communications and public relations firm across Egypt, Qatar,
                         and KSA.
                     </p>
 
                     <p className="about-description">
-                        With over 30 years of excellence in marketing facility management,
+                        With over 40 years of excellence in marketing facility management,
                         we have established ourselves as a leading integrated marketing
                         communications and public relations firm across Egypt, Qatar,
                         and KSA.
                     </p>
 
-                    {/* ✅ الزرار بعد التعديل */}
                     <button
                         className="about-button"
                         onClick={() => navigate("/about")}
