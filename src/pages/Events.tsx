@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-import "../styles/events.css";
+import { useRef, useEffect, useState } from "react"; import "../styles/events.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from "../components/Footer";
