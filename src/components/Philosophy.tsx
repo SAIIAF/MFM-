@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Phone } from 'lucide-react';
 import '../styles/philosophy.css';
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +37,7 @@ const philosophyData: PhilosophyCard[] = [
 const Philosophy = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const buttonCTARef = useRef<HTMLButtonElement>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -93,7 +95,11 @@ const Philosophy = () => {
                     ))}
                 </div>
 
-                <button ref={buttonCTARef} className="philosophy-cta">
+                <button
+                    ref={buttonCTARef}
+                    className="philosophy-cta"
+                    onClick={() => navigate("/contact")}
+                >
                     <Phone className="cta-icon" size={24} />
                     <span>Call or mail to schedule your complimentary consult</span>
                 </button>

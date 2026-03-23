@@ -33,7 +33,7 @@
     gap: 3rem;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     will-change: transform;
     overflow-x: auto;
     padding-bottom: 1rem;

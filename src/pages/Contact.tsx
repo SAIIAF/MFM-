@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import "../styles/contact.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import mapImage from "../assets/images/map.png";
+import mapImage from "../assets/images/map.jpg";
 import Footer from "../components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -90,22 +90,23 @@ const Contact: React.FC = () => {
                 <div className="contact-info">
                     <div className="info-item">
                         <h4>ADDRESS</h4>
-                        <p>P.O. Box 125</p>
-                        <p>Fairhope, AL 36533</p>
+                        <p>Shabrawi Khater</p>
+                        <p>Nasr City, Cairo, Egypt</p>
                     </div>
 
                     <div className="divider" />
 
                     <div className="info-item">
                         <h4>PHONE</h4>
-                        <p>Tel: 251.656.3843</p>
+                        <p>Tel: +20 150 385 5866 </p>
                     </div>
 
                     <div className="divider" />
 
                     <div className="info-item">
                         <h4>EMAIL</h4>
-                        <p>pdenham6400@att.net</p>
+                        <p>sk@mfmegypt.com
+                            www.mfmegypt.net </p>
                     </div>
                 </div>
 

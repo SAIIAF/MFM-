@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/ServicesPage.css";
 import Footer from "../components/Footer";
 
+import certificate from "../assets/images/RECOGNITION_MFM (1)_page-0001.jpg"; // عدّل المسار حسب مكان الصورة عندك
+
 import about1 from "../assets/images/about/abot1.jpg";
 import about2 from "../assets/images/about/about2.jpg";
 import about3 from "../assets/images/about/about3.jpg";
@@ -135,11 +137,11 @@ const ServicesPage: React.FC = () => {
                     <div className="services-overlay" />
 
                     <div className="services-hero-content">
-                        <h1>What we do</h1>
+                        <h1>Services</h1>
                         <p>
-                            SECTOR EXPERTISE From public relations to marketing and social media,
-                            from AI to healthcare marketing and from consumer PR to CSR, mfm
-                            has the expertise and experience needed to put our clients in the spotlight.
+                            We are part of the Digital Marketing industry, our target market are the consumers inside the Egyptian territory, and our primary service line is showcasing the virtual side of the Egyptian shopping malls and Street markets in an interaction and integrated way.
+                            Important characteristics of this platform is to facilitate the information and news to the shopping malls’ customers and visitors before and during their engagement with the malls.
+
                         </p>
                     </div>
                 </section>
@@ -159,9 +161,12 @@ const ServicesPage: React.FC = () => {
                         <div className="services-text-content">
                             <h2>Writing remains the key to public relations</h2>
                             <p className="services-intro">
-                                Writing remains the key to public relations.
-                                Communication – effective writing and speaking –
-                                is the essence of the practice of public relations.
+                                The Shopping Centers and retail industry in Egypt has expanded rapidly in the past several years and growth is expected to continue at a strong pace for the foreseeable future. This offers excellent opportunities for new business ideas to enter this market. So, we intend to address the needs of retail customers in this market who seek to reach out and create an awareness with their targeted audiences. And we will address this need by providing an All-in-One Digital Platform, will name it MSJ (Mall’s Street Journal)
+                                <br /> <br />
+                                The mission of our new business is to produce services that deliver superior value, offer outstanding real-time information, provide highly personalized shopping solutions, specifically designed and individually tailored for the needs of each customer, for a specific market niche.
+                                And to build a brand name franchise, that will lead their markets, as the most innovative in the marketing and retail shopping industry.
+                                <br /> <br />
+                                We intend to fulfill this mission by giving extra effort to Customer Service, Direct Sales, Content production and Management, research, superior workmanship, customer satisfaction, and addressing customer needs (Mall Management, Retail Sector, and Shoppers)
                             </p>
                         </div>
                     </div>
@@ -192,11 +197,9 @@ const ServicesPage: React.FC = () => {
                 </section>
 
                 {/* CENTER VIDEO */}
-                <section className="services-center-video-section">
-                    <div className="services-center-video-wrapper">
-                        <video autoPlay muted loop playsInline>
-                            <source src="/video/back.mp4" type="video/mp4" />
-                        </video>
+                <section className="services-certificate-section">
+                    <div className="services-certificate-wrapper">
+                        <img src={certificate} alt="Company Certificate" />
                     </div>
                 </section>
 

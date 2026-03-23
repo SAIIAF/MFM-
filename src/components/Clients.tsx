@@ -3,15 +3,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/clients.css';
 
-// ✅ Import client logos from local assets
-import client1 from '../assets/images/about/abot1.jpg';
-import client2 from '../assets/images/about/about2.jpg';
-import client3 from '../assets/images/about/about3.jpg';
-import client4 from '../assets/images/about/abot1.jpg';
-import client5 from '../assets/images/about/abot1.jpg';
-import client6 from '../assets/images/about/abot1.jpg';
-import client7 from '../assets/images/about/about2.jpg';
-import client8 from '../assets/images/about/about3.jpg';
+// Import client logos from local assets
+import client1 from '../assets/images/clients/client1.png';
+import client2 from '../assets/images/clients/client2.jpeg';
+import client3 from '../assets/images/clients/clent3.jpeg';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,11 +21,6 @@ const clientsData: ClientLogo[] = [
     { id: 1, name: 'Client 1', logo: client1 },
     { id: 2, name: 'Client 2', logo: client2 },
     { id: 3, name: 'Client 3', logo: client3 },
-    { id: 4, name: 'Client 4', logo: client4 },
-    { id: 5, name: 'Client 5', logo: client5 },
-    { id: 6, name: 'Client 6', logo: client6 },
-    { id: 7, name: 'Client 7', logo: client7 },
-    { id: 8, name: 'Client 8', logo: client8 },
 ];
 
 const Clients = () => {

@@ -3,12 +3,13 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/gallery.css';
 
-import gallery1 from '../assets/images/about/about2.jpg';
-import gallery2 from '../assets/images/لوجو/لوجو2.webp';
-import gallery3 from '../assets/images/about/abot1.jpg';
-import gallery4 from '../assets/images/about/about3.jpg';
-import gallery5 from '../assets/images/about/about3.jpg';
-import gallery6 from '../assets/images/about/about2.jpg';
+import gallery1 from '../assets/images/work/work1.jpeg';
+import gallery2 from '../assets/images/work/work2.jpeg';
+import gallery3 from '../assets/images/work/work3.jpeg';
+import gallery4 from '../assets/images/work/work4.jpeg';
+import gallery5 from '../assets/images/work/work5.jpeg';
+import gallery6 from '../assets/images/work/work6.jpeg';
+import gallery7 from '../assets/images/work/work7.jpeg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,7 @@ const galleryImages: GalleryImage[] = [
     { id: 4, title: 'Campaign 4', image: gallery4 },
     { id: 5, title: 'Campaign 5', image: gallery5 },
     { id: 6, title: 'Campaign 6', image: gallery6 },
+    { id: 7, title: 'Campaign 7', image: gallery7 },
 ];
 
 const Gallery = () => {
