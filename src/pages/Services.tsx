@@ -5,10 +5,11 @@ import Footer from "../components/Footer";
 
 import certificate from "../assets/images/RECOGNITION_MFM (1)_page-0001.jpg"; // عدّل المسار حسب مكان الصورة عندك
 
-import about1 from "../assets/images/about/abot1.jpg";
-import about2 from "../assets/images/about/about2.jpg";
-import about3 from "../assets/images/about/about3.jpg";
-import about4 from "../assets/images/about/abot1.jpg";
+import about1 from "../assets/images/projects/project2.jpeg";
+import about2 from "../assets/images/projects/project6.jpeg";
+import about3 from "../assets/images/projects/project7.jpeg";
+import about4 from "../assets/images/projects/project1.jpeg";
+
 
 import {
     FaAd,
@@ -152,8 +153,6 @@ const ServicesPage: React.FC = () => {
                         <div className="services-image-grid">
                             <img src={about1} alt="" />
                             <img src={about2} alt="" />
-                            <img src={about3} alt="" />
-                            <img src={about4} alt="" />
                             <img src={about3} alt="" />
                             <img src={about4} alt="" />
                         </div>
