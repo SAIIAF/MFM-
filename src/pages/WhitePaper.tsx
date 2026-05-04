@@ -213,8 +213,7 @@ function NewsModal({ article, isOpen, onClose }: NewsModalProps) {
             {/* Panel: stops propagation so clicks inside don't hit the backdrop */}
             <div
                 className="news-modal-panel"
-                onClick={(e: MouseEvent) => e.stopPropagation()}
-            >
+                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}            >
                 {/* Hero image */}
                 <div className="news-modal-panel__hero">
                     <img src={article.image} alt={article.title} />
@@ -416,31 +415,6 @@ export default function WhitePaper() {
                     </div>
                 </div>
             </section>
-
-            {/* CTA */}
-            {/* <section className="news-cta">
-                <div className="news-container">
-                    <div className="news-cta__inner">
-                        <h2 className="news-cta__title">{t('ابقَ على اطّلاع دائم', 'Stay Updated')}</h2>
-                        <p className="news-cta__text">
-                            {t(
-                                'اشترك في نشرتنا الإخبارية ليصلك كل جديد من مزارع شهيلا مباشرةً إلى بريدك الإلكتروني',
-                                'Subscribe to our newsletter and receive the latest updates from Shehaila Farms directly in your email'
-                            )}
-                        </p>
-                        <div className="news-cta__form">
-                            <input
-                                type="email"
-                                placeholder={t('أدخل بريدك الإلكتروني', 'Enter your email address')}
-                                className="news-cta__input"
-                                dir={language === 'ar' ? 'rtl' : 'ltr'}
-                            />
-                            <button className="news-cta__submit">{t('اشتراك', 'Subscribe')}</button>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
             <NewsModal article={selectedArticle} isOpen={isModalOpen} onClose={handleCloseModal} />
         </main>
     );
