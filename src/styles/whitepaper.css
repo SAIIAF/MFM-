@@ -41,13 +41,13 @@
 /* ─────────────────────────────────────────────
    Reset / Base - White Paper Page
 ───────────────────────────────────────────── */
-.wp-page *,
+/* .wp-page *,
 .wp-page *::before,
 .wp-page *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
 .wp-page {
     font-family: var(--wp-font-ar);
@@ -76,7 +76,8 @@
     align-items: center;
     background: linear-gradient(135deg, var(--wp-color-primary-dark) 0%, var(--wp-color-primary) 45%, var(--wp-color-primary-light) 75%, var(--wp-color-secondary) 100%);
     overflow: hidden;
-    padding: 100px 0 80px;
+    justify-content: center;
+    margin-top: 6rem;
 }
 
 .wp-hero__overlay {
